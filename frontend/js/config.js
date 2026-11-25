@@ -1,9 +1,19 @@
+
 /*
  * HelpHub frontend configuration.
- * For local development, keep the backend running on port 5000.
- * If the backend is hosted elsewhere, update API_BASE_URL here.
+ * Local development uses backend on port 5000.
+ * Production uses the same domain as the frontend.
  */
+
+const isLocal = 
+    window.location.hostname === "localhost" ||
+    window.location.hostname === "127.0.0.1";
+
+const BACKEND_URL = isLocal
+    ? "http://localhost:5000"
+    : window.location.origin;
+
 window.HELPHUB_CONFIG = Object.freeze({
-    API_BASE_URL: "http://localhost:5000/api/v1",
-    BACKEND_URL: "http://localhost:5000"
+    API_BASE_URL: `${BACKEND_URL}/api/v1`,
+    BACKEND_URL: BACKEND_URL
 });

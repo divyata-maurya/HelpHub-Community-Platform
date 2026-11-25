@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Reports | HelpHub</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/manage-reports.css">
+</head>
+<body>
+
+<header class="reports-header">
+    <h2>HelpHub - Admin Panel</h2>
+    <nav>
+        <a href="dashboard.html">Dashboard</a>
+        <button id="logoutBtn">Logout</button>
+    </nav>
+</header>
+
+<main class="reports-container">
+    <section class="page-heading">
+        <h1>Manage Reports</h1>
+        <p>Review and manage reports submitted by HelpHub users.</p>
+    </section>
+
+    <section class="report-stats">
+        <div class="stat-card">
+            <h3 id="totalReports">0</h3>
+            <p>Total Reports</p>
+        </div>
+        <div class="stat-card">
+            <h3 id="pendingReports">0</h3>
+            <p>Pending</p>
+        </div>
+        <div class="stat-card">
+            <h3 id="reviewReports">0</h3>
+            <p>Under Review</p>
+        </div>
+        <div class="stat-card">
+            <h3 id="closedReports">0</h3>
+            <p>Resolved / Dismissed</p>
+        </div>
+    </section>
+
+    <section class="reports-panel">
+        <div class="filters">
+            <select id="statusFilter">
+                <option value="">All Reports</option>
+                <option value="PENDING">Pending</option>
+                <option value="UNDER_REVIEW">Under Review</option>
+                <option value="RESOLVED">Resolved</option>
+                <option value="DISMISSED">Dismissed</option>
+            </select>
+
+            <button id="filterBtn">Apply Filter</button>
+            <button id="resetBtn" class="reset-btn">Reset</button>
+        </div>
+
+        <p id="reportsMessage"></p>
+
+        <div id="reportsList" class="reports-list">
+            <p>Loading reports...</p>
+        </div>
+    </section>
+</main>
+
+<script src="../js/config.js"></script>
+    <script src="../js/manage-reports.js"></script>
+    <script src="../js/back-button.js"></script>
+</body>
+</html>

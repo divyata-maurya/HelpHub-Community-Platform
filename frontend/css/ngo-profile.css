@@ -1,0 +1,310 @@
+
+/* =================================
+   NGO PROFILE PAGE STYLING
+================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #f4f7fb;
+    color: #1e293b;
+    font-family: Arial, sans-serif;
+}
+
+/* Header */
+
+.ngo-header {
+    background: #173b35;
+    color: #ffffff;
+    padding: 18px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.ngo-header h2 {
+    margin: 0;
+    font-size: 23px;
+}
+
+.back-btn {
+    color: #ffffff;
+    text-decoration: none;
+    background: #287c68;
+    padding: 11px 18px;
+    border-radius: 7px;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+.back-btn:hover {
+    background: #35947d;
+}
+
+.back-btn:focus-visible {
+    outline: 3px solid #ffffff;
+    outline-offset: 3px;
+}
+
+/* Main Container */
+
+.ngo-container {
+    width: min(900px, 92%);
+    margin: 35px auto;
+    display: grid;
+    gap: 25px;
+}
+
+/* Cards */
+
+.ngo-card {
+    background: #ffffff;
+    padding: 30px;
+    border: 1px solid #e2e8f0;
+    border-radius: 13px;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.06);
+}
+
+.ngo-card h1,
+.ngo-card h2 {
+    color: #173b35;
+    margin-top: 0;
+    line-height: 1.4;
+}
+
+.ngo-card h1 {
+    font-size: 28px;
+}
+
+.ngo-card h2 {
+    font-size: 22px;
+}
+
+.subtitle {
+    color: #64748b;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+/* Form */
+
+.ngo-card label {
+    display: block;
+    margin: 18px 0 8px;
+    font-weight: 600;
+    font-size: 14px;
+    color: #334155;
+}
+
+.ngo-card input,
+.ngo-card textarea {
+    display: block;
+    width: 100%;
+    padding: 13px 14px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font: inherit;
+    font-size: 15px;
+    color: #1e293b;
+    background: #ffffff;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.ngo-card textarea {
+    min-height: 110px;
+    resize: vertical;
+}
+
+.ngo-card input:focus,
+.ngo-card textarea:focus {
+    outline: none;
+    border-color: #287c68;
+    box-shadow: 0 0 0 3px rgba(40, 124, 104, 0.12);
+}
+
+/* Buttons */
+
+.ngo-card button {
+    width: 100%;
+    min-height: 46px;
+    padding: 13px 18px;
+    margin-top: 22px;
+    border: none;
+    border-radius: 8px;
+    background: #287c68;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.ngo-card button:hover:not(:disabled) {
+    background: #173b35;
+    transform: translateY(-1px);
+}
+
+.ngo-card button:focus-visible {
+    outline: 3px solid rgba(40, 124, 104, 0.35);
+    outline-offset: 3px;
+}
+
+.ngo-card button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Messages */
+
+.message {
+    margin: 12px 0;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+.message.success {
+    color: #168044;
+}
+
+.message.error {
+    color: #c62828;
+}
+
+/* Profile Details */
+
+.detail {
+    padding: 14px 0;
+    border-bottom: 1px solid #e2e8f0;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    overflow-wrap: anywhere;
+    line-height: 1.5;
+}
+
+.detail:last-child {
+    border-bottom: none;
+}
+
+.info-text {
+    color: #64748b;
+    margin-top: 18px;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Verification Status */
+
+.status {
+    display: inline-block;
+    width: fit-content;
+    padding: 7px 13px;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 13px;
+}
+
+.status.pending {
+    color: #8a5b00;
+    background: #fff0c2;
+}
+
+.status.verified {
+    color: #126b35;
+    background: #d9f5e2;
+}
+
+.status.rejected {
+    color: #a32121;
+    background: #ffe0e0;
+}
+
+/* Tablet */
+
+@media (max-width: 768px) {
+    .ngo-header {
+        padding: 17px 4%;
+    }
+
+    .ngo-container {
+        width: 94%;
+        margin: 25px auto;
+        gap: 20px;
+    }
+
+    .ngo-card {
+        padding: 25px;
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+    .ngo-header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 18px 5%;
+    }
+
+    .ngo-header h2 {
+        font-size: 21px;
+    }
+
+    .back-btn {
+        display: inline-block;
+        text-align: center;
+    }
+
+    .ngo-container {
+        width: 94%;
+        margin: 20px auto;
+        gap: 17px;
+    }
+
+    .ngo-card {
+        padding: 20px 17px;
+        border-radius: 10px;
+    }
+
+    .ngo-card h1 {
+        font-size: 24px;
+    }
+
+    .ngo-card h2 {
+        font-size: 20px;
+    }
+
+    .subtitle {
+        font-size: 14px;
+    }
+
+    .ngo-card input,
+    .ngo-card textarea {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    .ngo-card button {
+        font-size: 15px;
+    }
+}
+
+/* Small Mobile */
+
+@media (max-width: 360px) {
+    .ngo-container {
+        width: 96%;
+    }
+
+    .ngo-card {
+        padding: 17px 13px;
+    }
+
+    .ngo-header h2 {
+        font-size: 19px;
+    }
+}

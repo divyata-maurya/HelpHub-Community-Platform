@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HelpHub | Pending Donations</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/admin.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container navbar">
+            <a href="../index.html" class="logo">
+                Help<span>Hub</span>
+            </a>
+
+            <div class="nav-buttons">
+                <a href="dashboard.html" class="btn">Dashboard</a>
+                <button id="logoutBtn" class="btn" type="button">Logout</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="admin-container">
+
+        <section class="admin-heading">
+            <h1>Pending Donations</h1>
+            <p>Review and manage donation submissions from donors.</p>
+        </section>
+
+        <div id="adminMessage" class="admin-message" role="status">
+            Loading pending donations...
+        </div>
+
+        <section id="pendingDonationsContainer" class="pending-donations-grid">
+        </section>
+
+        <div class="pagination">
+            <button id="prevPage" class="btn" disabled>Previous</button>
+            <span id="pageInfo">Page 1</span>
+            <button id="nextPage" class="btn" disabled>Next</button>
+        </div>
+
+    </main>
+
+    <script src="../js/config.js"></script>
+    <script src="../js/pending-donations.js"></script>
+    <script src="../js/back-button.js"></script>
+
+</body>
+</html>

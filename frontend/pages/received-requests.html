@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Received Requests | HelpHub</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/donor.css">
+</head>
+<body>
+    <header class="dashboard-header">
+        <div class="container header-content">
+            <h2>HelpHub</h2>
+            <nav>
+                <a href="dashboard.html">Dashboard</a>
+                <button id="logoutBtn" type="button">Logout</button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container donor-page">
+        <div class="donor-page-heading">
+            <div>
+                <h1>Received Donation Requests</h1>
+                <p>Manage requests received for your donations.</p>
+            </div>
+            <a class="back-link" href="dashboard.html">Back to Dashboard</a>
+        </div>
+
+        <div id="requestMessage" class="request-message" role="status">
+            Loading requests...
+        </div>
+
+        <section id="receivedRequestsContainer" class="received-requests-grid"></section>
+    </main>
+
+    <script src="../js/config.js"></script>
+    <script src="../js/received-requests.js"></script>
+    <script src="../js/back-button.js"></script>
+</body>
+</html>

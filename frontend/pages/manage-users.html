@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Users | HelpHub</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/manage-users.css">
+</head>
+<body>
+
+<header class="users-header">
+    <h2>HelpHub - Admin Panel</h2>
+    <nav>
+        <a href="dashboard.html">Dashboard</a>
+        <button id="logoutBtn">Logout</button>
+    </nav>
+</header>
+
+<main class="users-container">
+    <section class="page-heading">
+        <h1>Manage Users</h1>
+        <p>View and manage all registered HelpHub accounts.</p>
+    </section>
+
+    <section class="users-stats">
+        <div class="stat-card">
+            <h3 id="totalUsers">0</h3>
+            <p>Total Users</p>
+        </div>
+        <div class="stat-card">
+            <h3 id="activeUsers">0</h3>
+            <p>Active Users</p>
+        </div>
+        <div class="stat-card">
+            <h3 id="inactiveUsers">0</h3>
+            <p>Inactive Users</p>
+        </div>
+    </section>
+
+    <section class="users-panel">
+        <div class="filters">
+            <input type="text" id="searchInput"
+                placeholder="Search name or email...">
+
+            <select id="roleFilter">
+                <option value="">All Roles</option>
+                <option value="donor">Donor</option>
+                <option value="recipient">Recipient</option>
+                <option value="ngo">NGO</option>
+                <option value="admin">Admin</option>
+            </select>
+
+            <select id="statusFilter">
+                <option value="">All Status</option>
+                <option value="true">Active</option>
+                <option value="false">Inactive</option>
+            </select>
+
+            <button id="filterBtn">Apply Filters</button>
+            <button id="resetBtn" class="reset-btn">Reset</button>
+        </div>
+
+        <p id="usersMessage"></p>
+
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Role</th>
+                        <th>Phone</th>
+                        <th>Status</th>
+                        <th>Joined</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="usersTableBody">
+                    <tr>
+                        <td colspan="7">Loading users...</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="pagination">
+            <button id="prevBtn">Previous</button>
+            <span id="pageInfo">Page 1</span>
+            <button id="nextBtn">Next</button>
+        </div>
+    </section>
+</main>
+
+<div id="userModal" class="modal">
+    <div class="modal-content">
+        <button id="closeModal" class="close-btn">×</button>
+        <h2>User Details</h2>
+        <div id="userDetails"></div>
+    </div>
+</div>
+
+<script src="../js/config.js"></script>
+    <script src="../js/manage-users.js"></script>
+    <script src="../js/back-button.js"></script>
+</body>
+</html>

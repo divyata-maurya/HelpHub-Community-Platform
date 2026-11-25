@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HelpHub | My Profile</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/profile.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="container navbar">
+        <a href="dashboard.html" class="logo">Help<span>Hub</span></a>
+        <a href="dashboard.html" class="btn">Dashboard</a>
+    </div>
+</header>
+
+<main class="profile-container">
+
+    <section class="profile-heading">
+        <h1>My Profile</h1>
+        <p>Manage your personal information and account password.</p>
+    </section>
+
+    <!-- PROFILE INFORMATION -->
+    <section class="profile-card">
+        <h2>Personal Information</h2>
+
+        <form id="profileForm">
+
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" minlength="2" maxlength="50" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" readonly>
+                <small>Email address cannot be changed here.</small>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" maxlength="20">
+            </div>
+
+            <div class="form-group">
+                <label for="address">Address</label>
+                <textarea id="address" maxlength="300"></textarea>
+            </div>
+
+            <button type="submit" class="profile-btn">
+                Save Profile
+            </button>
+
+            <p id="profileMessage"></p>
+
+        </form>
+    </section>
+
+    <!-- CHANGE PASSWORD -->
+    <section class="profile-card">
+        <h2>Change Password</h2>
+
+        <form id="passwordForm">
+
+            <div class="form-group">
+                <label for="currentPassword">Current Password</label>
+                <input type="password" id="currentPassword" required>
+            </div>
+
+            <div class="form-group">
+                <label for="newPassword">New Password</label>
+                <input type="password" id="newPassword" minlength="8" required>
+                <small>New password must contain at least 8 characters.</small>
+            </div>
+
+            <div class="form-group">
+                <label for="confirmPassword">Confirm New Password</label>
+                <input type="password" id="confirmPassword" minlength="8" required>
+            </div>
+
+            <button type="submit" class="profile-btn">
+                Change Password
+            </button>
+
+            <p id="passwordMessage"></p>
+
+        </form>
+    </section>
+
+</main>
+
+<script src="../js/config.js"></script>
+    <script src="../js/profile.js"></script>
+    <script src="../js/back-button.js"></script>
+
+</body>
+</html>

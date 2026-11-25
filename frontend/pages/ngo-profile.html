@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NGO Profile | HelpHub</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/ngo-profile.css">
+</head>
+<body>
+
+    <header class="ngo-header">
+        <h2>HelpHub - NGO Profile</h2>
+        <a href="dashboard.html" class="back-btn">Back to Dashboard</a>
+    </header>
+
+    <main class="ngo-container">
+        <section class="ngo-card">
+            <h1>Organization Profile</h1>
+            <p class="subtitle">Register your NGO and share the areas where you provide support.</p>
+
+            <div id="profileMessage" class="message"></div>
+
+            <form id="ngoForm">
+                <label>Organization Name *</label>
+                <input type="text" id="organizationName" required maxlength="150"
+                    placeholder="Enter organization name">
+
+                <label>Registration Number *</label>
+                <input type="text" id="registrationNumber" required
+                    placeholder="Enter registration number">
+
+                <label>Organization Description</label>
+                <textarea id="description" maxlength="1000"
+                    placeholder="Describe your organization"></textarea>
+
+                <label>Service Areas</label>
+                <textarea id="serviceAreas"
+                    placeholder="Enter areas separated by commas"></textarea>
+
+                <label>Document Details / URLs</label>
+                <textarea id="documents"
+                    placeholder="Enter document names or URLs, one per line"></textarea>
+
+                <button type="submit" id="submitBtn">Register NGO Profile</button>
+            </form>
+        </section>
+
+        <section class="ngo-card profile-card">
+            <h2>My NGO Profile</h2>
+            <div id="profileDetails">
+                <p>Loading profile...</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="../js/config.js"></script>
+    <script src="../js/ngo-profile.js"></script>
+    <script src="../js/back-button.js"></script>
+    
+</body>
+</html>

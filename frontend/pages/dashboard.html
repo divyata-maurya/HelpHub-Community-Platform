@@ -1,0 +1,157 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HelpHub | Dashboard</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container navbar">
+
+            <a href="../index.html" class="logo">
+                Help<span>Hub</span>
+            </a>
+
+            <div class="nav-buttons">
+                <span id="welcomeUser">Welcome!</span>
+
+                <button id="logoutBtn" class="btn" type="button">
+                    Logout
+                </button>
+            </div>
+
+        </div>
+    </header>
+
+    <main class="dashboard-container">
+
+        <section class="dashboard-heading">
+            <h1 id="dashboardTitle">My Dashboard</h1>
+            <p id="dashboardSubtitle">
+                Welcome to your HelpHub dashboard.
+            </p>
+        </section>
+
+        <section id="dashboardStats" class="stats-grid">
+            <p>Loading dashboard...</p>
+        </section>
+
+        <p id="dashboardMessage" class="dashboard-message"></p>
+
+        <!-- DONOR ACTIONS -->
+        <section id="donorActions" class="donor-actions" style="display: none;">
+
+            <h2>Donation Management</h2>
+
+            <div class="donor-action-buttons">
+
+                <a href="create-donation.html" class="btn">
+                    Create Donation
+                </a>
+
+                <a href="my-donations.html" class="btn">
+                    My Donations
+                </a>
+
+                <a href="received-requests.html" class="btn">
+                    Received Requests
+                </a>
+
+                <a href="notifications.html" class="btn">
+                    Notifications
+                </a>
+
+                <a href="submit-report.html" class="btn">Submit Report</a>
+                <a href="my-reports.html" class="btn">My Reports</a>
+
+                <a href="profile.html" class="btn">My Profile</a>
+            </div>
+
+        </section>
+
+        <!-- RECIPIENT ACTIONS -->
+        <section id="recipientActions" class="donor-actions" style="display: none;">
+
+            <h2>Find Donations</h2>
+
+            <div class="donor-action-buttons">
+
+                <a href="browse-donations.html" class="btn">
+                    Browse Donations
+                </a>
+
+                <a href="my-requests.html" class="btn">
+                    My Requests
+                </a>
+
+                <a href="notifications.html" class="btn">
+                    Notifications
+                </a>
+
+                <a href="submit-report.html" class="btn">Submit Report</a>
+                <a href="my-reports.html" class="btn">My Reports</a>
+                <a href="profile.html" class="btn">My Profile</a>
+            </div>
+
+        </section>
+
+        <!-- ADMIN ACTIONS -->
+        <section id="adminActions" class="donor-actions" style="display: none;">
+
+            <h2>Admin Management</h2>
+
+            <div class="donor-action-buttons">
+
+                <a href="pending-donations.html" class="btn">
+                    Manage Donations
+                </a>
+
+                <a href="manage-users.html" class="btn">
+                    Manage Users
+                </a>
+
+                <a href="manage-ngos.html" class="btn">
+                    Manage NGOs
+                </a>
+
+                <a href="notifications.html" class="btn">
+                    Notifications
+                </a>
+
+                <a href="manage-reports.html" class="btn">
+                    Manage Reports
+                </a>
+                <a href="profile.html" class="btn">My Profile</a>
+            </div>
+
+
+        </section>
+
+        <!-- NGO ACTIONS -->
+        <section id="ngoActions" class="donor-actions" style="display: none;">
+            <h2>NGO Management</h2>
+            <div class="donor-action-buttons">
+                <a href="ngo-profile.html" class="btn">My NGO Profile</a>
+                <a href="notifications.html" class="btn">Notifications</a>
+                <a href="submit-report.html" class="btn">Submit Report</a>
+                <a href="my-reports.html" class="btn">My Reports</a>
+                <a href="profile.html" class="btn">My Profile</a>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="../js/config.js"></script>
+    <script src="../js/dashboard.js"></script>
+    <script src="../js/back-button.js"></script>
+</body>
+</html>

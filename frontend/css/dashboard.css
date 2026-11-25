@@ -1,0 +1,461 @@
+
+/* ==========================================
+   HELP HUB - DASHBOARD STYLING
+========================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f7fb;
+    color: #1e293b;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* ==========================================
+   HEADER
+========================================== */
+
+.header {
+    background: #ffffff;
+    padding: 18px 5%;
+    border-bottom: 1px solid #e2e8f0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #172554;
+    text-decoration: none;
+}
+
+.logo span {
+    color: #2563eb;
+}
+
+.nav-buttons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+#welcomeUser {
+    font-size: 15px;
+    font-weight: 600;
+    overflow-wrap: anywhere;
+}
+
+#logoutBtn {
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+#logoutBtn:hover {
+    background: #1d4ed8;
+}
+
+/* ==========================================
+   DASHBOARD CONTAINER
+========================================== */
+
+.dashboard-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 10px;
+}
+
+.dashboard-heading {
+    margin-bottom: 30px;
+}
+
+.dashboard-heading h1 {
+    font-size: 32px;
+    color: #172554;
+    margin-bottom: 10px;
+    line-height: 1.3;
+}
+
+.dashboard-heading p {
+    color: #64748b;
+    font-size: 16px;
+    overflow-wrap: anywhere;
+}
+
+/* ==========================================
+   STATISTICS CARDS
+========================================== */
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 20px;
+}
+
+.stat-card {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+    border: 1px solid #e2e8f0;
+    transition: 0.3s ease;
+    min-width: 0;
+}
+
+.stat-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 7px 20px rgba(0, 0, 0, 0.09);
+}
+
+.stat-card h3 {
+    font-size: 16px;
+    color: #64748b;
+    margin-bottom: 15px;
+}
+
+.stat-card p {
+    font-size: 30px;
+    font-weight: bold;
+    color: #2563eb;
+    overflow-wrap: anywhere;
+}
+
+/* ==========================================
+   ROLE ACTION SECTIONS
+========================================== */
+
+#donorActions,
+#recipientActions,
+#ngoActions,
+#adminActions {
+    margin-top: 30px;
+    padding: 25px;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.04);
+}
+
+#donorActions h2,
+#recipientActions h2,
+#ngoActions h2,
+#adminActions h2 {
+    color: #172554;
+    font-size: 21px;
+    margin-bottom: 18px;
+}
+
+#donorActions a,
+#recipientActions a,
+#ngoActions a,
+#adminActions a {
+    margin: 5px;
+}
+
+/* ==========================================
+   GENERAL BUTTONS
+========================================== */
+
+.btn {
+    display: inline-block;
+    background: #2563eb;
+    color: #ffffff;
+    padding: 11px 19px;
+    border-radius: 7px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s ease;
+    text-align: center;
+}
+
+.btn:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+/* ==========================================
+   DASHBOARD MESSAGE
+========================================== */
+
+.dashboard-message {
+    margin-top: 20px;
+    color: #dc2626;
+    font-weight: 600;
+    overflow-wrap: anywhere;
+}
+
+/* ==========================================
+   CREATE DONATION FORM
+========================================== */
+
+#donationForm {
+    background: #ffffff;
+    padding: 35px;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.07);
+    border: 1px solid #e5e7eb;
+    width: 100%;
+}
+
+#donationForm .form-group {
+    margin-bottom: 22px;
+}
+
+#donationForm label {
+    display: block;
+    font-weight: 600;
+    font-size: 14px;
+    color: #334155;
+    margin-bottom: 9px;
+}
+
+#donationForm input,
+#donationForm select,
+#donationForm textarea {
+    width: 100%;
+    padding: 13px 15px;
+    border: 1px solid #cbd5e1;
+    border-radius: 9px;
+    background: #f8fafc;
+    color: #1e293b;
+    font-size: 15px;
+    font-family: inherit;
+    outline: none;
+    transition: 0.3s ease;
+}
+
+#donationForm textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+#donationForm input:focus,
+#donationForm select:focus,
+#donationForm textarea:focus {
+    border-color: #2563eb;
+    background: #ffffff;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+#donationForm h3 {
+    color: #183153;
+    font-size: 20px;
+    margin: 30px 0 20px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+#donationForm input[type="file"] {
+    background: #f8fafc;
+    padding: 12px;
+    cursor: pointer;
+}
+
+#donationForm small {
+    display: block;
+    color: #64748b;
+    margin-top: 8px;
+    font-size: 12px;
+}
+
+#donationForm button[type="submit"] {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 9px;
+    background: #2563eb;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+#donationForm button[type="submit"]:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(37, 99, 235, 0.2);
+}
+
+#donationForm button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+#donationMessage {
+    margin-top: 18px;
+    font-weight: 600;
+    text-align: center;
+    overflow-wrap: anywhere;
+}
+
+/* ==========================================
+   ACCESSIBILITY
+========================================== */
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid #93c5fd;
+    outline-offset: 3px;
+}
+
+/* ==========================================
+   TABLET RESPONSIVE
+========================================== */
+
+@media (max-width: 992px) {
+    .dashboard-container {
+        width: 94%;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* ==========================================
+   MOBILE RESPONSIVE
+========================================== */
+
+@media (max-width: 600px) {
+    .header {
+        padding: 15px 4%;
+    }
+
+    .navbar {
+        align-items: flex-start;
+    }
+
+    .logo {
+        font-size: 25px;
+    }
+
+    .nav-buttons {
+        width: 100%;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    #welcomeUser {
+        font-size: 13px;
+    }
+
+    #logoutBtn {
+        padding: 9px 15px;
+    }
+
+    .dashboard-container {
+        width: 94%;
+        margin: 25px auto;
+        padding: 0;
+    }
+
+    .dashboard-heading {
+        margin-bottom: 22px;
+    }
+
+    .dashboard-heading h1 {
+        font-size: 26px;
+    }
+
+    .dashboard-heading p {
+        font-size: 14px;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .stat-card {
+        padding: 20px;
+    }
+
+    .stat-card p {
+        font-size: 27px;
+    }
+
+    #donorActions,
+    #recipientActions,
+    #ngoActions,
+    #adminActions {
+        padding: 18px;
+    }
+
+    #donorActions a,
+    #recipientActions a,
+    #ngoActions a,
+    #adminActions a {
+        display: block;
+        margin: 10px 0;
+        width: 100%;
+    }
+
+    #donationForm {
+        padding: 20px;
+    }
+
+    #donationForm h3 {
+        font-size: 18px;
+    }
+
+    #donationForm input,
+    #donationForm select,
+    #donationForm textarea {
+        font-size: 16px;
+    }
+}
+
+/* ==========================================
+   SMALL MOBILE
+========================================== */
+
+@media (max-width: 360px) {
+    .dashboard-heading h1 {
+        font-size: 23px;
+    }
+
+    .logo {
+        font-size: 22px;
+    }
+
+    .stat-card {
+        padding: 16px;
+    }
+
+    #donationForm {
+        padding: 15px;
+    }
+}

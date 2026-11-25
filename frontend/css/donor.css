@@ -1,0 +1,178 @@
+
+.donor-page {
+    padding-top: 35px;
+    padding-bottom: 50px;
+}
+
+.donor-page-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+}
+
+.donor-page-heading h1 {
+    margin-bottom: 8px;
+}
+
+.donor-page-heading p {
+    color: #666;
+    margin: 0;
+}
+
+.back-link {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.request-message {
+    padding: 14px 18px;
+    margin-bottom: 22px;
+    background: #eff6ff;
+    color: #1d4ed8;
+    border-radius: 8px;
+}
+
+.request-message.error {
+    background: #fee2e2;
+    color: #b91c1c;
+}
+
+.received-requests-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 22px;
+}
+
+.received-request-card {
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 22px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+}
+
+.request-card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 18px;
+}
+
+.request-card-top h3 {
+    margin: 0;
+    color: #1f2937;
+}
+
+.request-status {
+    display: inline-block;
+    padding: 6px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    background: #f3f4f6;
+    color: #374151;
+}
+
+.request-status.pending {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.request-status.accepted {
+    background: #dbeafe;
+    color: #1e40af;
+}
+
+.request-status.rejected,
+.request-status.cancelled {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+.request-status.handed-over {
+    background: #ede9fe;
+    color: #5b21b6;
+}
+
+.request-status.completed {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.request-details p {
+    margin: 10px 0;
+    color: #4b5563;
+    overflow-wrap: anywhere;
+    line-height: 1.5;
+}
+
+.request-details strong {
+    color: #1f2937;
+}
+
+.request-actions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.request-actions button {
+    border: none;
+    border-radius: 7px;
+    padding: 11px 15px;
+    color: #fff;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.request-actions button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.accept-btn {
+    background: #16a34a;
+}
+
+.reject-btn {
+    background: #dc2626;
+}
+
+.handover-btn {
+    background: #2563eb;
+}
+
+.accept-btn:hover,
+.reject-btn:hover,
+.handover-btn:hover {
+    filter: brightness(0.92);
+}
+
+@media (max-width: 600px) {
+    .donor-page {
+        padding-top: 22px;
+    }
+
+    .received-requests-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .received-request-card {
+        padding: 17px;
+    }
+
+    .request-actions {
+        flex-direction: column;
+    }
+
+    .request-actions button {
+        width: 100%;
+    }
+}

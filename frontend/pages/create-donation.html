@@ -1,0 +1,150 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HelpHub | Create Donation</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container navbar">
+
+            <a href="../index.html" class="logo">
+                Help<span>Hub</span>
+            </a>
+
+            <a href="dashboard.html" class="btn">
+                Back to Dashboard
+            </a>
+
+        </div>
+    </header>
+
+    <main class="dashboard-container">
+
+        <section class="dashboard-heading">
+            <h1>Create a Donation</h1>
+            <p>Share something useful with someone who needs it.</p>
+        </section>
+
+        <form id="donationForm" enctype="multipart/form-data">
+
+            <div class="form-group">
+                <label for="title">Donation Title *</label>
+                <input type="text" id="title" required
+                    minlength="3" maxlength="100"
+                    placeholder="Example: Winter Clothes">
+            </div>
+
+            <div class="form-group">
+                <label for="description">Description *</label>
+                <textarea id="description" required
+                    maxlength="1000"
+                    placeholder="Describe your donation"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="category">Category *</label>
+                <select id="category" required>
+                    <option value="">Select Category</option>
+                    <option>Food & Groceries</option>
+                    <option>Clothes & Accessories</option>
+                    <option>Books & Education</option>
+                    <option>Furniture & Household</option>
+                    <option>Electronics</option>
+                    <option>Toys & Sports</option>
+                    <option>Personal Care & Hygiene</option>
+                    <option>Baby Care</option>
+                    <option>Mobility & Accessibility</option>
+                    <option>Other</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="quantity">Quantity *</label>
+                <input type="number" id="quantity"
+                    min="1" step="1" required>
+            </div>
+
+            <div class="form-group">
+                <label for="unit">Unit *</label>
+                <input type="text" id="unit" required
+                    maxlength="30"
+                    placeholder="Example: pieces, kg, packets">
+            </div>
+
+            <div class="form-group">
+                <label for="condition">Condition *</label>
+                <select id="condition" required>
+                    <option value="">Select Condition</option>
+                    <option>New</option>
+                    <option>Like New</option>
+                    <option>Good</option>
+                    <option>Fair</option>
+                </select>
+            </div>
+
+            <h3>Pickup Location</h3>
+
+            <div class="form-group">
+                <label for="address">Full Address</label>
+                <input type="text" id="address"
+                    placeholder="Enter pickup address">
+            </div>
+
+            <div class="form-group">
+                <label for="city">City *</label>
+                <input type="text" id="city" required>
+            </div>
+
+            <div class="form-group">
+                <label for="state">State *</label>
+                <input type="text" id="state" required>
+            </div>
+
+            <div class="form-group">
+                <label for="country">Country *</label>
+                <input type="text" id="country"
+                    value="India" required>
+            </div>
+
+            <div class="form-group">
+                <label for="postalCode">Postal Code</label>
+                <input type="text" id="postalCode">
+            </div>
+
+            <div class="form-group">
+                <label for="expiryDate">Expiry Date (Optional)</label>
+                <input type="date" id="expiryDate">
+            </div>
+
+            <div class="form-group">
+                <label for="images">Donation Images (Optional)</label>
+                <input type="file" id="images"
+                    accept="image/jpeg,image/png,image/webp"
+                    multiple>
+                <small>Maximum 5 images, 5 MB each. JPG, PNG or WEBP.</small>
+            </div>
+
+            <button type="submit" class="btn">
+                Submit Donation
+            </button>
+
+            <p id="donationMessage"></p>
+
+        </form>
+
+    </main>
+    <script src="../js/config.js"></script>
+    <script src="../js/donation.js"></script>
+    <script src="../js/back-button.js"></script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage NGOs | HelpHub</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/manage-ngos.css">
+</head>
+<body>
+
+<header class="ngo-header">
+    <h2>HelpHub - Admin Panel</h2>
+    <nav>
+        <a href="dashboard.html">Dashboard</a>
+        <button id="logoutBtn">Logout</button>
+    </nav>
+</header>
+
+<main class="ngo-container">
+
+    <section class="page-heading">
+        <h1>Manage NGOs</h1>
+        <p>Review NGO registrations and manage verification requests.</p>
+    </section>
+
+    <section class="ngo-stats">
+        <div class="stat-card">
+            <h3 id="totalNgos">0</h3>
+            <p>Total NGOs</p>
+        </div>
+
+        <div class="stat-card">
+            <h3 id="pendingNgos">0</h3>
+            <p>Pending Verification</p>
+        </div>
+
+        <div class="stat-card">
+            <h3 id="verifiedNgos">0</h3>
+            <p>Verified NGOs</p>
+        </div>
+
+        <div class="stat-card">
+            <h3 id="rejectedNgos">0</h3>
+            <p>Rejected NGOs</p>
+        </div>
+    </section>
+
+    <section class="ngo-panel">
+
+        <div class="filters">
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search NGO name or registration number..."
+            >
+
+            <select id="statusFilter">
+                <option value="">All Status</option>
+                <option value="PENDING">Pending</option>
+                <option value="VERIFIED">Verified</option>
+                <option value="REJECTED">Rejected</option>
+            </select>
+
+            <button id="filterBtn">Apply Filter</button>
+            <button id="resetBtn" class="reset-btn">Reset</button>
+        </div>
+
+        <p id="ngoMessage"></p>
+
+        <div id="ngoList" class="ngo-list">
+            <p>Loading NGO profiles...</p>
+        </div>
+
+    </section>
+</main>
+
+<script src="../js/config.js"></script>
+    <script src="../js/manage-ngos.js"></script>
+    <script src="../js/back-button.js"></script>
+    
+</body>
+</html>
